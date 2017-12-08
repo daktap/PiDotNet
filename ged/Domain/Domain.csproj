@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="archive.cs" />
+    <Compile Include="Cvs.cs" />
     <Compile Include="document.cs" />
     <Compile Include="document1.cs" />
     <Compile Include="folder.cs" />
