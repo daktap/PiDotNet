@@ -1,18 +1,18 @@
-namespace ged.Migrations
+namespace Data.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ged.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Data.Models.gedContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(ged.Models.ApplicationDbContext context)
+        protected override void Seed(Data.Models.gedContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -4,6 +4,7 @@ using Data.Models.Mapping;
 
 namespace Data.Models
 {
+
     public partial class gedContext : DbContext
     {
         static gedContext()
