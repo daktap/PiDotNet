@@ -8,5 +8,6 @@ namespace Domain
 {
     class Vacation
     {
+        int id;
     }
 }
