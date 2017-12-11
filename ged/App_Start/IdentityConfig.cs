@@ -73,7 +73,7 @@ namespace ged
             });
             manager.RegisterTwoFactorProvider("Email Code", new EmailTokenProvider<ApplicationUser>
             {
-                Subject = "Security Code",
+                Subject = "Security Co jfde",
                 BodyFormat = "Your security code is {0}"
             });
             manager.EmailService = new EmailService();
