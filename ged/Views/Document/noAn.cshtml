@@ -1,0 +1,9 @@
+﻿@model Data.Models.document
+@{
+    ViewBag.Title = "noAn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>NO ANMOLIES FOR THIS DOCUMENT</h1>
+<h4>If you want to add an anomalie for this document click @Html.ActionLink("here", "GoToAdd",new { Model.Id })</h4>
+@Html.ActionLink("Return", "Index")

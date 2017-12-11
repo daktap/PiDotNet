@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Data.Models.document>
+
+@{
+    ViewBag.Title = "List of documents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List of documents</h2>
+<h5>@Html.ActionLink("STATS(number of document per type)", "Stat")</h5>
+
+
+<table class="table">
+    <tr>
+  
+        <th>
+            TITLE
+        </th>
+        <th>
+            TYPE
+        </th>
+        <th>
+            DATE
+        </th>
+        <th>
+            PIC
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Titre1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Entry_Date)
+        </td>
+
+        <td>
+            <img src="@Url.Content("~/Content/image/"+item.picture)" height="80px" width="140px" />
+        </td>
+        <td align="center">
+            @Html.ActionLink("View anomalies", "GoToAnomaly", new { item.Id }) 
+
+        </td>
+    </tr>
+}
+
+</table>
