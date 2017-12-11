@@ -28,6 +28,7 @@ namespace ged.Controllers
              return View(eventservice.GetAll().Where(e => e.cin.Equals(u.cin)));
 
         }
+        //this is for push 
 
         public ActionResult googleMap(int id)
         {
