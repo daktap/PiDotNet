@@ -1,6 +1,8 @@
+using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using Data.Models.Mapping;
+using MySql.Data.Entity;
 
 namespace Data.Models
 {
@@ -8,7 +10,13 @@ namespace Data.Models
     {
         static gedContext()
         {
+            
             Database.SetInitializer<gedContext>(null);
+        }
+
+        private static void SetSqlGenerator(string v, MySqlMigrationSqlGenerator mySqlMigrationSqlGenerator)
+        {
+            throw new NotImplementedException();
         }
 
         public gedContext()
@@ -23,6 +31,7 @@ namespace Data.Models
         public DbSet<reclamation> reclamations { get; set; }
         public DbSet<user> users { get; set; }
 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new archiveMap());
@@ -31,6 +40,7 @@ namespace Data.Models
             modelBuilder.Configurations.Add(new folderMap());
             modelBuilder.Configurations.Add(new reclamationMap());
             modelBuilder.Configurations.Add(new userMap());
+
         }
     }
 }

@@ -6,14 +6,14 @@ namespace Data.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
-    public sealed partial class aaaa : IMigrationMetadata
+    [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
+    public sealed partial class date : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(aaaa));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(date));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712091353444_aaaa"; }
+            get { return "201712101137185_date"; }
         }
         
         string IMigrationMetadata.Source
