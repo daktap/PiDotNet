@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Data.Models.reclamation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.dateSol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateTrait)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.message)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reclamDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.statuts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateSol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateTrait)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reclamDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.statuts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subject)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

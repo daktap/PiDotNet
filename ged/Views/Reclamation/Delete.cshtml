@@ -1,0 +1,89 @@
+﻿@model Data.Models.reclamation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>reclamation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dateSol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateSol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTrait)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTrait)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.message)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reclamDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reclamDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.statuts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.statuts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usr_cin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usr_cin)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

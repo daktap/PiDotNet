@@ -13,5 +13,6 @@ namespace Data.Models
         public string prenomUser { get; set; }
         public string role { get; set; }
         public string tel { get; set; }
+        public virtual ICollection<Event> events { get; set; }
     }
 }

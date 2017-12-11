@@ -1,6 +1,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using Data.Models.Mapping;
+using Data.Configurations;
 
 namespace Data.Models
 {
@@ -31,6 +32,7 @@ namespace Data.Models
             modelBuilder.Configurations.Add(new folderMap());
             modelBuilder.Configurations.Add(new reclamationMap());
             modelBuilder.Configurations.Add(new userMap());
+            
         }
     }
 }
